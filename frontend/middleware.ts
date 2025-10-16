@@ -54,7 +54,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // 跳过所有内部路径 (_next)
-    '/((?!_next|api|favicon.ico|logo.png|qr_code.jpg).*)',
+    // 跳过所有内部路径 (_next)、API 路由，以及所有带文件扩展名的静态资源
+    '/((?!_next|api|.*\..*).*)',
   ],
 }; 
