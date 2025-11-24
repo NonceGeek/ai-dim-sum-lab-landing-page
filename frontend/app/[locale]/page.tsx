@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import WhyWeAreHere from '../components/WhyWeAreHere';
 import Features from '../components/Features';
+import Stats from '../components/Stats';
 import Architecture from '../components/Architecture';
 import QuickLinks from '../components/QuickLinks';
 import Footer from '../components/Footer';
@@ -73,6 +74,8 @@ export default async function Home({ params }: PageProps) {
         <WhyWeAreHere dict={dict} />
 
         <Features dict={dict} />
+
+        <Stats />
 
         <Architecture dict={dict} />
 
