@@ -61,6 +61,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     authors: [{ name: "DIMSUM AI Labs" }],
     viewport: "width=device-width, initial-scale=1",
     robots: "index, follow",
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/logo.png",
+    },
   };
 }
 
