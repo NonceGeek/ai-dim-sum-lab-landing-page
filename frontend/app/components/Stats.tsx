@@ -45,7 +45,8 @@ export default async function Stats() {
   ];
 
   return (
-    <section className="py-12 relative animate-fade-in-up">
+    <section id="stats" className="py-12 relative animate-fade-in-up">
+      <br></br><br></br><br></br><br></br>
       <div className="text-center mb-10">
         <h2 className="text-3xl lg:text-4xl font-bold mb-4 tech-heading bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
           数据情况
@@ -83,6 +84,7 @@ export default async function Stats() {
           );
         })}
       </div>
+      <br></br><br></br><br></br><br></br>
     </section>
   );
 }
