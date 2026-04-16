@@ -130,7 +130,7 @@ export default function Header({ locale, dict }: HeaderProps) {
                 className="w-8 h-8 rounded-lg"
               />
               <h1 className="text-xl lg:text-2xl font-bold tech-heading text-primary min-w-[10rem] lg:min-w-[12rem]">
-                DIMSUM AI Labs
+                DIMSUM AI Lab
               </h1>
             </Link>
           </div>

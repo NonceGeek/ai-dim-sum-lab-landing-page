@@ -1,7 +1,9 @@
 'use client';
 
 import { Rocket } from 'lucide-react';
+import LabNewsSlideshow from './LabNewsSlideshow';
 import { FadeInUp } from './ScrollReveal';
+import labNewsData from '../data/lab-news.json';
 import { type Dictionary } from '../i18n/types';
 
 interface HeroContentProps {
@@ -11,9 +13,9 @@ interface HeroContentProps {
 export default function HeroContent({ dict }: HeroContentProps) {
   return (
     <div className="hero-content text-left w-full max-w-none p-8 lg:p-12 relative z-10 pt-0 ">
-      <div className="w-full">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(312px,408px)] xl:grid-cols-[minmax(0,1fr)_minmax(336px,456px)] gap-10 xl:gap-14 items-start">
         {/* 左下角内容区域 */}
-        <div className="max-w-7xl -mt-10">
+        <div className="max-w-7xl -mt-10 min-w-0">
           {/* 第一行：DIMSUM AI 渐变文字 */}
           <FadeInUp delay={0.1}>
             <h1 className="text-3xl lg:text-5xl font-black tech-heading mb-2 leading-tight">
@@ -73,6 +75,11 @@ export default function HeroContent({ dict }: HeroContentProps) {
             </div>
           </FadeInUp>
         </div>
+
+        {/* mt 是轮播图向下移动的像素值 */}
+        <FadeInUp delay={0.35} className="w-full justify-self-center lg:justify-self-end mt-[25px]">
+          <LabNewsSlideshow items={labNewsData.items} />
+        </FadeInUp>
       </div>
     </div>
   );

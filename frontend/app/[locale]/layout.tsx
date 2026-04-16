@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
   const { locale } = await params;
   
   const titles = {
-    en: "DIMSUM AI Labs",
+    en: "DIMSUM AI Lab",
     zh: "DIMSUM AI 实验室",
     yue: "DIMSUM AI 實驗室"
   };
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
     title: titles[locale],
     description: descriptions[locale],
     keywords: ["粤语", "AI", "人工智能", "Cantonese", "LLM", "Safty"],
-    authors: [{ name: "DIMSUM AI Labs" }],
+    authors: [{ name: "DIMSUM AI Lab" }],
     viewport: "width=device-width, initial-scale=1",
     robots: "index, follow",
     icons: {
