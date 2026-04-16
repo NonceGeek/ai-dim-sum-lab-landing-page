@@ -8,7 +8,7 @@
     "projectBoard": "Buidler Discussion Board"
   },
   "hero": {
-    "title": "DIMSUM AI Lab",
+    "title": "DIMSUM AI Labs",
     "subtitle": "AI-Friendly Cantonese Corpus System and AI Agent System Serving Real-World Environments",
     "description": "Compatible with Lingnan culture, compatible with AI technology,\nBuilding a complete system integrating \"Cantonese datasets — Large Language Models — AI Agents — Innovative applications\".",
     "description_2": "Four key features:\n* **AI-Friendly** — Equipped with interfaces for connecting with large and small models\n* **AI Agent Friendly** — Equipped with interfaces for connecting with AI Agents\n* **Hot-swappable Modules** — The system can dynamically add new capabilities, such as integrating \"blockchain rights confirmation modules\"\n* **Community Mode** — Adhering to the mode of co-construction between core team and technical community, jointly building the main system, corpus, Cantonese Apps and module library",
@@ -100,10 +100,10 @@
     }
   },
   "footer": {
-    "company": "DIMSUM AI Lab",
+    "company": "DIMSUM AI Labs",
     "description": "Advancing AI research and development in natural language processing, with a focus on Chinese dialect studies and computational linguistics.",
     "partners": "Partners",
-    "copyright": "© 2025 DIMSUM AI Lab. All rights reserved.",
+    "copyright": "© 2026 DIMSUM AI Labs. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Policy",
@@ -112,7 +112,7 @@
       "description": "Follow our WeChat Public Account for the latest news and updates.",
       "button": "WeChat Public Account",
       "modal": {
-        "title": "AI Dim Sum Lab 公众号",
+        "title": "DimSum AI Labs 公众号",
         "description": "Scan QR code to follow for latest updates"
       }
     }
