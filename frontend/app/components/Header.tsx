@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SmoothScroll from "./SmoothScroll";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { type Locale } from "../i18n/config";
+import { type Locale, defaultLocale } from "../i18n/config";
 import { type Dictionary } from "../i18n/types";
 
 interface HeaderProps {
@@ -14,10 +14,15 @@ interface HeaderProps {
 
 export default function Header({ locale, dict }: HeaderProps) {
   const pathname = usePathname();
+  // 默认语言 zh 无前缀，首页可能是 "/" 或 "/zh"
   const isHomePage =
-    pathname.includes("/" + locale) && !pathname.includes("/board");
+    !pathname.includes("/board") &&
+    (pathname === "/" ||
+      pathname === `/${locale}` ||
+      pathname === `/${locale}/`);
 
-  const navItems = [{ label: dict.navigation.home, id: "hero", href: "/" }];
+  const homeHref = locale === defaultLocale ? "/" : `/${locale}`;
+  const navItems = [{ label: dict.navigation.home, id: "hero", href: homeHref }];
 
   const externalNavItems = [
     { label: dict.navigation.searchEngine, href: "https://search.aidimsum.com/" },

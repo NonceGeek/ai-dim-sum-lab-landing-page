@@ -2,7 +2,7 @@
 import { Globe, ChevronDown } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
-import { locales, localeNames, type Locale } from '../i18n/config';
+import { locales, localeNames, defaultLocale, type Locale } from '../i18n/config';
 
 interface LanguageSwitcherProps {
   currentLocale: Locale;
@@ -30,19 +30,22 @@ export default function LanguageSwitcher({ currentLocale, className = '' }: Lang
   const handleLanguageChange = (locale: Locale) => {
     setIsOpen(false);
     
-    // 构建新的URL路径
+    // 默认语言 zh 无前缀（/），en / yue 带前缀
     const pathSegments = pathname.split('/');
     const currentPathLocale = pathSegments[1];
-    
-    // 如果当前路径包含语言代码，替换它
-    if (locales.includes(currentPathLocale as Locale)) {
-      pathSegments[1] = locale;
-    } else {
-      // 如果当前路径不包含语言代码，在开头添加
+    const hasLocalePrefix = locales.includes(currentPathLocale as Locale);
+
+    if (hasLocalePrefix) {
+      if (locale === defaultLocale) {
+        pathSegments.splice(1, 1);
+      } else {
+        pathSegments[1] = locale;
+      }
+    } else if (locale !== defaultLocale) {
       pathSegments.splice(1, 0, locale);
     }
     
-    const newPath = pathSegments.join('/');
+    const newPath = pathSegments.join('/') || '/';
     router.push(newPath);
   };
 

@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/zh",
+      "destination": "/",
+      "statusCode": 302
+    },
+    {
+      "source": "/zh/:path*",
+      "destination": "/:path*",
+      "statusCode": 302
+    }
+  ]
+}
